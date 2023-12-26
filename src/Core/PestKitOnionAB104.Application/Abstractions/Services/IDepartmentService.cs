@@ -7,7 +7,7 @@ namespace PestKitOnionAB104.Application.Abstractions.Services
     {
         Task<ICollection<DepartmentItemDto>> GetAllAsync(int page, int take);
         Task<DepartmentGetDto> GetAsync(int id);
-        Task CreateAsync(DepartmentCreateDto departmentCreateDto);
+        Task CreateAsync(BlogCreateDto departmentCreateDto);
         Task UpdateAsync(int id, DepartmentUpdateDto departmentUpdateDto);
         Task DeleteAsync(int id);
         Task SoftDeleteAsync(int id);

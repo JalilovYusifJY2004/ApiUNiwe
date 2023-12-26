@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace PestKitOnionAB104.Application.DTOs.Employee
 {
-    public record EmployeeUpdateDto(string Name);
+    public record EmployeeUpdateDto(string Name, int DepartmentId, int PositionId);
 }

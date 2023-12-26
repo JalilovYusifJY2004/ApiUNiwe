@@ -2,9 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PestKitOnionAB104.Application.Abstractions.Repositories;
 using PestKitOnionAB104.Application.Abstractions.Services;
-using PestKitOnionAB104.Application.DTOs.Department;
 using PestKitOnionAB104.Application.DTOs.Employee;
-using PestKitOnionAB104.Application.DTOs.Position;
 using PestKitOnionAB104.Domain.Entities;
 
 namespace PestKitOnionAB104.Persistence.Implementations.Services
@@ -31,7 +29,7 @@ namespace PestKitOnionAB104.Persistence.Implementations.Services
             await _repository.SaveChangesAsync();
         }
 
-        
+
 
         public async Task<IEnumerable<EmployeeItemDto>> GetAllPaginatedAsync(int page, int take)
         {
@@ -47,7 +45,7 @@ namespace PestKitOnionAB104.Persistence.Implementations.Services
             return dto;
         }
 
-       
+
 
 
         public async Task UpdateAsync(int id, EmployeeUpdateDto employeeUpdateDto)
@@ -56,7 +54,7 @@ namespace PestKitOnionAB104.Persistence.Implementations.Services
 
             if (employee is null) throw new Exception("Not found");
 
-            employee.Name = employeeUpdateDto.Name;
+            employee = _mapper.Map(employeeUpdateDto, employee);
 
             _repository.Update(employee);
             await _repository.SaveChangesAsync();

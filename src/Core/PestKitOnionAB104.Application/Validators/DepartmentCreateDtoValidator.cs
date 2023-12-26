@@ -3,7 +3,7 @@ using PestKitOnionAB104.Application.DTOs.Department;
 
 namespace PestKitOnionAB104.Application.Validators
 {
-    internal class DepartmentCreateDtoValidator : AbstractValidator<DepartmentCreateDto>
+    internal class DepartmentCreateDtoValidator : AbstractValidator<BlogCreateDto>
     {
         public DepartmentCreateDtoValidator()
         {

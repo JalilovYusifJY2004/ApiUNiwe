@@ -11,7 +11,7 @@ namespace PestKitOnionAB104.Application.MappingProfiles
         {
             CreateMap<Department, DepartmentItemDto>();
             CreateMap<Department, DepartmentGetDto>();
-            CreateMap<DepartmentCreateDto, Department>();
+            CreateMap<BlogCreateDto, Department>();
             CreateMap<Department, IncludeDepartmentDto>();
         }
     }

@@ -34,10 +34,11 @@ namespace PestKitOnionAB104.Api.Controllers
             return StatusCode(StatusCodes.Status201Created);
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, [FromForm] EmployeeUpdateDto employeeUpdateDto)
+        public async Task<IActionResult> Update(int id, EmployeeUpdateDto employeeUpdateDto)
         {
             if (id <= 0) return StatusCode(StatusCodes.Status400BadRequest);
             await _service.UpdateAsync(id, employeeUpdateDto);
+            
             return NoContent();
         }
         [HttpDelete("{id}")]

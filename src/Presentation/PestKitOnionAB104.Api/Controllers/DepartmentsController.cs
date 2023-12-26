@@ -28,7 +28,7 @@ namespace PestKitOnionAB104.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromForm] DepartmentCreateDto departmentCreateDto)
+        public async Task<IActionResult> Create([FromForm] BlogCreateDto departmentCreateDto)
         {
             await _service.CreateAsync(departmentCreateDto);
 

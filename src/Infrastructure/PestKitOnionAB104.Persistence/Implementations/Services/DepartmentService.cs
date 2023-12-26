@@ -21,7 +21,7 @@ namespace PestKitOnionAB104.Persistence.Implementations.Services
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task CreateAsync(DepartmentCreateDto departmentCreateDto)
+        public async Task CreateAsync(BlogCreateDto departmentCreateDto)
         {
             
             await _repository.AddAsync(_mapper.Map<Department>(departmentCreateDto));

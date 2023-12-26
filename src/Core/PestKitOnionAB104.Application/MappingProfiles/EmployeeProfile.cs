@@ -11,6 +11,7 @@ namespace PestKitOnionAB104.Application.MappingProfiles
             CreateMap<Employee, EmployeeItemDto>().ReverseMap();
             CreateMap<Employee, EmployeeGetDto>().ReverseMap();
             CreateMap<EmployeeCreateDto, Employee>().ReverseMap();
+            CreateMap<EmployeeUpdateDto, Employee>().ReverseMap();
         }
     }
 }
