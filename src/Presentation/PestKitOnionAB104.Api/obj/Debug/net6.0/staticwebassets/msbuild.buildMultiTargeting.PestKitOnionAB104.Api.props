@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PestKitOnionAB104.Api.props" />
+</Project>
